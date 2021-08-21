@@ -45,7 +45,7 @@ const BgImage = styled.div`
   background-image: url("/images/login-background.jpg");
   height: 100%;
   position: absolute;
-  top: 15px;
+  top: 28px;
   right: 0;
   left: 0;
   z-index: -1;
@@ -57,9 +57,7 @@ const CTA = styled.div`
   margin-bottom: 40px;
 `;
 const CtaLogoOne = styled.img`
-  width: 600px;
-  height: 15vh;
-  margin-bottom: 15px;
+  width: 100%;
 `;
 
 const SignUp = styled.a`

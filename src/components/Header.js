@@ -6,7 +6,24 @@ export const Header = () => {
       <DisneyLogo>
         <Logo src="./images/logo.svg"></Logo>
       </DisneyLogo>
-      <NavbarMenu></NavbarMenu>
+      <NavbarMenu>
+        <Home href="/home">
+          <HomeImage src="/images/home-icon.svg"></HomeImage>
+          <span>HOME</span>
+        </Home>
+        <Home href="/search">
+          <HomeImage src="/images/search-icon.svg"></HomeImage>
+          <span>SEARCH</span>
+        </Home>
+        <Home href="/orignals">
+          <HomeImage src="/images/original-icon.svg"></HomeImage>
+          <span>ORIGNALS</span>
+        </Home>
+        <Home href="/movies">
+          <HomeImage src="/images/movie-icon.svg"></HomeImage>
+          <span>MOVIES</span>
+        </Home>
+      </NavbarMenu>
       <LoginButton>
         <SpanElement>Login</SpanElement>
       </LoginButton>
@@ -22,13 +39,13 @@ const Navbar = styled.nav`
   display: flex;
   background-color: #090b13;
   justify-content: space-between;
-
   z-index: 3;
 `;
 const Logo = styled.img`
   width: 100%;
   padding: 3vh;
   max-height: 90px;
+  padding-top: 10px;
 `;
 const DisneyLogo = styled.a`
   margin: 0;
@@ -49,4 +66,29 @@ const SpanElement = styled.span`
   padding: 10px 15px;
   border-radius: 10px;
 `;
-const NavbarMenu = styled.div``;
+const NavbarMenu = styled.div`
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  margin-right: auto;
+  margin-left: 25px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+const Home = styled.a`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  span {
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+`;
+const HomeImage = styled.img``;
