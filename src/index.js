@@ -6,6 +6,8 @@ import App from "./App";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js"></script>
   </React.StrictMode>,
   document.getElementById("root")
 );

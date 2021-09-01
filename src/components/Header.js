@@ -1,6 +1,12 @@
 import styled from "styled-components";
-
+import { auth, provider } from "../firebase";
 export const Header = () => {
+  const handleAuth = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+  };
   return (
     <Navbar>
       <DisneyLogo>
@@ -24,7 +30,7 @@ export const Header = () => {
           <span>MOVIES</span>
         </Home>
       </NavbarMenu>
-      <LoginButton>
+      <LoginButton onClick={handleAuth}>
         <SpanElement>Login</SpanElement>
       </LoginButton>
     </Navbar>
@@ -65,6 +71,12 @@ const SpanElement = styled.span`
   border: 2px solid #f9f9f9;
   padding: 10px 15px;
   border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  &:hover {
+    background-color: #f9f9f9;
+    color: black;
+  }
 `;
 const NavbarMenu = styled.div`
   display: flex;

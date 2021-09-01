@@ -14,12 +14,22 @@ export const Login = (props) => {
             <Link>www.hotstar.com</Link>.
           </Description>
           <CtaLogoTwo src="/images/cta-logo-two.png"></CtaLogoTwo>
+          <Image></Image>
         </CTA>
       </Content>
     </Container>
   );
 };
-
+const Image = styled.embed`
+  background-image: url("/images/bacgroundimg.svg");
+  height: 100%;
+  position: absolute;
+  top: 28px;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0.9;
+`;
 const Container = styled.section`
   overflow: hidden;
   display: flex;
